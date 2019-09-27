@@ -1,0 +1,19 @@
+Dataset3 is composed of:
+- The csv file Questions_with_learning_objectives_filtered which contains questions linked to learning objectives. This file follows csv format with three columns separated by ",":
+	•	First column is the question id.
+	•	Second column is the question text after processing (after stop words removal and lemmatization)
+	•	Third column is the question category (learning objective)
+- The file Filtered_list_of_learning_objectives which contains the list of learning objectives considered in Dataset3
+- The folder LearningObjectiveAsBagsOfWords (236) which contains 236 files. Each file corresponds a learning objective. Each file contains the textual content after stop words removal and lemmatization. 
+- The folder LearningObjectivesAsBagsOfTechnicalTerms (236) which contains 236 files. Each file corresponds a learning objective. Each file contains bag of technical terms represnation of the learning objective.  This file follows csv format with five columns, at least, separated by ",":
+	•	First column is the term prefLabel.
+	•	Second column is the frequency of the term in the learning objective. 
+	•	Third column is the tf*idf score for the term in the learning objective. 
+	•	Fourth column is the semantic types ids to which this term belongs (separated by spaces if more than one).
+	•	Fifth column and after(if found) are the url(s) of the term.
+The folder QuestionsAsBagsOfTechnicalTerms which contains a file for each question.  Each file contains bag of technical terms represnation of the question.  This file follows is formated with five columns, separated by "|":
+	•	First column is the term url.
+	•	Second column is the term prefLabel. 
+	•	Third column is the text identified for the term in the question text. 
+	•	Fourth column is the semantic types ids to which this term belongs.
+	•	Fifth column is the number of times the term appears in the question text.

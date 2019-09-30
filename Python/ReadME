@@ -9,3 +9,9 @@
 6) build input to the Deep Learning software
 python process_data-LIG.py mr-LEMMAcbow0Size50Window5.bin #generates mr.p file, concatenates size of biggest sentence to the file
 7) execute python ./conv_net_sentence-LIG.py mr.p size_of_biggest_sentence -nonstatic -rand
+
+#setting up theano
+a)install miniconda for python 2.7 (doesn't work with python 3)
+b)install theano and pygpu (conda install theano pygpu)
+c)numpy downgrade to 1.12 (install install numpy = 1.12)
+d) fix a theano installation bug as described in https://stackoverflow.com/questions/53423610/how-to-update-scan-cython-code-in-theano

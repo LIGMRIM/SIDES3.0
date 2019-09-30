@@ -2,7 +2,7 @@
 2) run script cleanHTMLandLemmatize.py
 3) run script clean_french_stop_words.py
 4) export the data, one file per class
-5) dump only the text from all the classes into a text file and process it with Google's word2vec software from: https://code.google.com/archive/p/word2vec/
+5) dump only the text from all the classes into one single text file and process it with Google's word2vec software from: https://code.google.com/archive/p/word2vec/
 ./word2phrase -train text_data.txt -output data.phrase0 -threshold 200 -debug 2 -min-count 5
 ./word2phrase -train data.phrase0 -output data.phrase1 -threshold 100 -debug 2
 ./word2vec -train data.phrase1 -output mr-LEMMAcbow0Size50Window5.bin -cbow 0 -size 50 -window 5 -negative 20 -hs 0 -sample 1e-5 -threads 20 -binary 1 -iter 30
